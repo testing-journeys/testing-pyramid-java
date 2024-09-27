@@ -1,7 +1,7 @@
 package org.chicu.controller;
 
-import org.chicu.model.User;
-import org.chicu.service.UserService;
+import org.chicu.model.Employee;
+import org.chicu.service.EmployeeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -16,22 +16,22 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 // Unit Test (Controller Components - Mocking dependencies - MockMvc)
-@WebMvcTest(UserController.class)
-class UserControllerTest {
+@WebMvcTest(EmployeeController.class)
+class EmployeeControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
     @MockBean
-    private UserService userService;
+    private EmployeeService employeeService;
 
     @Test
     void getUsers() throws Exception {
 
         // dependencies setup
-        when(userService.getUsers())
-                .thenReturn(Collections.singletonList(new User("user 1", "user 1 details")));
+        when(employeeService.getEmployees())
+                .thenReturn(Collections.singletonList(new Employee("user 1", "user 1 details")));
 
-        mockMvc.perform(get("/api/v1/users"))
+        mockMvc.perform(get("/api/v1/employees"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(
                         """

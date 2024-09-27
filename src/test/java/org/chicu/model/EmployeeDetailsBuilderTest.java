@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 // Unit Test
-class UserDetailsBuilderTest {
+class EmployeeDetailsBuilderTest {
 
     @Test
     void buildUserDetailsWhenBlank() {
-        User subject = new User("system-abc-123");
+        Employee subject = new Employee("system-abc-123");
         // act
-        String actualDetails = UserDetailsBuilder.buildUserDetails(subject.getUsername());
+        String actualDetails = EmployeeDetailsBuilder.buildUserDetails(subject.getUsername());
         // expectations
         String expectedDetails = "Details: system-abc-123, magic processing";
         // checks

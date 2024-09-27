@@ -3,7 +3,7 @@ package org.chicu.model;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass
-class UserDetailsBuilder {
+class EmployeeDetailsBuilder {
 
     String buildUserDetails(String username) {
         if (username.isBlank()) {
