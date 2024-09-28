@@ -1,5 +1,5 @@
-@EmployeesManagement
-Feature: Employees Management
+@EmployeesManagement @UI
+Feature: UI - Employees Management
 
   This feature is about employees management
 
@@ -13,8 +13,8 @@ Feature: Employees Management
       | id | username | details        |
       | 1  | user-1   | user-1 details |
       | 2  | user-2   | user-2 details |
-    When the operator retrieves all existing employees
-    Then the following employees are returned
-      | id | username | details        |
-      | 1  | user-1   | user-1 details |
-      | 2  | user-2   | user-2 details |
+    When the operator retrieves all existing employees through UI
+    Then the following employees are returned through UI
+      | username | details        |
+      | user-1   | user-1 details |
+      | user-2   | user-2 details |

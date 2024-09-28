@@ -27,10 +27,14 @@ public class EmployeeStepDefs {
 
     @DataTableType
     public Employee employeeDataType(Map<String, String> entry) {
-        return new Employee(
-                Long.valueOf(entry.get("id")),
+        Employee employee = new Employee(
                 entry.get("username"),
                 entry.get("details"));
+        String id = entry.get("id");
+        if (id != null) {
+            employee.setId(Long.valueOf(id));
+        }
+        return employee;
     }
 
     @Given("the operator has {string} role")
