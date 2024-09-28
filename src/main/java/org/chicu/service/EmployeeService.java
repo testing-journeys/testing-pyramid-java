@@ -16,4 +16,8 @@ public class EmployeeService {
     public Collection<Employee> getEmployees() {
         return employeeRepository.findAll();
     }
+
+    public String createEmployee(Employee employee) {
+        return employeeRepository.save(employee).getId().toString();
+    }
 }
