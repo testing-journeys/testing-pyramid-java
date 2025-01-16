@@ -22,3 +22,16 @@ Steps to create the Docker image and run the container:
 - `docker build -t sample-sut4test .` - to build the Docker image
 - `docker run -d -p 8081:8081 sample-sut4test` - to run the Docker container
 - `http://localhost:8081/ui/v1/employees` - to check the application is running correctly 
+
+### Workflow
+
+```mermaid
+sequenceDiagram
+    Alice ->> Bob: Hello Bob, how are you?
+    Bob -->> John: How about you John?
+    Bob --x Alice: I am good thanks!
+    Bob -x John: I am good thanks!
+    Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+    Bob --> Alice: Checking with John...
+    Alice -> John: Yes... John, how are you?
+```
