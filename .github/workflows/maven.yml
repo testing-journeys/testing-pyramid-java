@@ -48,3 +48,6 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKER_USERNAME }}/testing-pyramid:${{ github.sha }}
+
+      - name: Run E2E Tests
+        run: mvn test -Dtest=End2EndTest
