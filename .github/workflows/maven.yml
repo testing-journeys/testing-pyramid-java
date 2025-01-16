@@ -50,4 +50,4 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/testing-pyramid:${{ github.sha }}
 
       - name: Run E2E Tests
-        run: mvn test -Dtest=End2EndTest
+        run: mvn test -pl tp-sut-e2et -Dtest=End2EndTest

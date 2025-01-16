@@ -1,4 +1,4 @@
-package org.chicu.it.runner;
+package org.chicu;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

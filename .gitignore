@@ -1,3 +1,4 @@
 /.idea/
-/testing-pyramid.iml
-/target/
+/*.iml
+**/target/
+.DS_Store

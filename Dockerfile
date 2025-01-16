@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the jar file into the container
-COPY target/*.jar app.jar
+COPY tp-sut-uict/target/*.jar app.jar
 
 # Expose the port the app runs on
 EXPOSE 8081
